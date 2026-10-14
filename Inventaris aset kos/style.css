@@ -1,0 +1,248 @@
+/* ==========================================
+   GLOBAL STYLES & VARIABLES
+   ================================---------- */
+:root {
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --danger: #dc2626;
+  --danger-hover: #b91c1c;
+  --success-bg: #ecfdf5;
+  --success-text: #065f46;
+  --warning-bg: #fffbeb;
+  --warning-text: #92400e;
+  --danger-bg: #fef2f2;
+  --danger-text: #991b1b;
+  --bg-color: #f8fafc;
+  --card-bg: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --radius: 8px;
+  --transition: all 0.2s ease-in-out;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+  padding: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ==========================================
+   TYPOGRAPHY & NAVIGATION
+   ================================---------- */
+h1 {
+  color: var(--text-main);
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: var(--text-main);
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+/* Navigasi / Breadcrumb Link */
+body > p:first-of-type {
+  background: var(--card-bg);
+  padding: 12px 20px;
+  border-radius: var(--radius);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  margin-bottom: 25px;
+}
+
+body > p:first-of-type a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+body > p:first-of-type a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================
+   TABLE DESIGN
+   ================================---------- */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: var(--card-bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  margin-bottom: 30px;
+}
+
+th, td {
+  padding: 14px 16px;
+  text-align: left;
+}
+
+th {
+  background-color: #f1f5f9;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--border-color);
+}
+
+td {
+  border-bottom: 1px solid var(--border-color);
+  font-size: 14px;
+  color: var(--text-main);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover td {
+  background-color: #f8fafc;
+}
+
+/* Table Link (Tombol Lihat) */
+td a {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: #e0e7ff;
+  color: var(--primary);
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 13px;
+  transition: var(--transition);
+}
+
+td a:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* ==========================================
+   FORM DESIGN
+   ================================---------- */
+form {
+  background-color: var(--card-bg);
+  padding: 25px;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  margin-bottom: 30px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text-main);
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--text-main);
+  background-color: #fff;
+  transition: var(--transition);
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* ==========================================
+   BUTTONS
+   ================================---------- */
+button, .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  text-align: center;
+}
+
+button:hover, .btn:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+/* Tombol Hapus Khusus */
+button[name="hapus"], .btn-danger {
+  background-color: var(--danger);
+}
+
+button[name="hapus"]:hover, .btn-danger:hover {
+  background-color: var(--danger-hover);
+}
+
+/* Tautan Batal (Di halaman detail) */
+form a, .btn-secondary {
+  display: inline-block;
+  margin-right: 15px;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 0;
+}
+
+form a:hover {
+  color: var(--text-main);
+}
+
+/* ==========================================
+   RESPONSIVE LAYOUT
+   ================================---------- */
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+  
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
